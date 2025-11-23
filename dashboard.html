@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - CRS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 fs-4 fw-bold text-uppercase border-bottom border-secondary">
+                <i class="fas fa-car-side me-2"></i> GoCar<span class="text-primary">Admin</span>
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="dashboard.html" class="list-group-item list-group-item-action active">
+                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </a>
+                <a href="cars.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-car me-2"></i> Cars List
+                </a>
+                <a href="rentals.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-invoice-dollar me-2"></i> Rentals
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users me-2"></i> Customers
+                </a>
+                <a href="index.html" class="list-group-item list-group-item-action text-danger mt-5">
+                    <i class="fas fa-sign-out-alt me-2"></i> Logout
+                </a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <h4 class="ms-3 mb-0 fw-bold text-secondary">Dashboard</h4>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="https://ui-avatars.com/api/?name=Admin+User&background=4f46e5&color=fff" class="rounded-circle me-2" width="35">
+                                Admin User
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="index.html">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4 py-5">
+                
+                <div id="promoCarousel" class="carousel slide mb-5 shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://placehold.co/1200x300/4f46e5/FFF?text=Welcome+to+GoCar+Admin+Panel" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://placehold.co/1200x300/fd7e14/FFF?text=Check+Fleet+Maintenance+Status" class="d-block w-100" style="height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <div class="col-md-4">
+                        <div class="stat-card p-4 d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="text-muted mb-1 fw-bold text-uppercase small">Total Fleet</p>
+                                <h2 class="fw-bold mb-0 text-dark">14 Cars</h2>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> 2 New this month</small>
+                            </div>
+                            <div class="stat-icon bg-light text-primary">
+                                <i class="fas fa-car"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card p-4 d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="text-muted mb-1 fw-bold text-uppercase small">Active Rentals</p>
+                                <h2 class="fw-bold mb-0 text-dark">8 Active</h2>
+                                <small class="text-warning"><i class="fas fa-clock"></i> 3 Returning today</small>
+                            </div>
+                            <div class="stat-icon bg-light text-warning">
+                                <i class="fas fa-key"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="stat-card p-4 d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="text-muted mb-1 fw-bold text-uppercase small">Total Revenue</p>
+                                <h2 class="fw-bold mb-0 text-dark">RM 12,450</h2>
+                                <small class="text-success"><i class="fas fa-arrow-up"></i> +15% vs last month</small>
+                            </div>
+                            <div class="stat-icon bg-light text-success">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-8">
+                        <div class="chart-container h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold m-0">Revenue Analytics</h5>
+                                <select class="form-select form-select-sm w-auto border-0 bg-light fw-bold text-secondary">
+                                    <option>This Year</option>
+                                    <option>Last Year</option>
+                                </select>
+                            </div>
+                            <div id="revenueChart"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <div class="chart-container h-100">
+                            <h5 class="fw-bold mb-4">Recent Activity</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 border-bottom">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width:35px; height:35px;">
+                                            <i class="fas fa-check small"></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 fw-bold text-dark">Booking #1024</p>
+                                            <small class="text-muted">Completed by Ali</small>
+                                        </div>
+                                    </div>
+                                    <span class="small text-muted">2m ago</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 border-bottom">
+                                    <div class="d-flex align-items-center">
+                                        <div class="bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center me-3" style="width:35px; height:35px;">
+                                            <i class="fas fa-plus small"></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 fw-bold text-dark">New Car Added</p>
+                                            <small class="text-muted">Honda City 2024</small>
+                                        </div>
+                                    </div>
+                                    <span class="small text-muted">1h ago</span>
+                                </li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 mt-4 btn-sm rounded-pill">View All Logs</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div> </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

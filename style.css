@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #4f46e5; /* Indigo */
+    --sidebar-bg: #1e293b;    /* Dark Slate */
+    --bg-color: #f3f4f6;      /* Light Gray */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+/* --- SIDEBAR STYLING --- */
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+    background-color: var(--sidebar-bg);
+    color: white;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 1.5rem 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#sidebar-wrapper .list-group-item {
+    background-color: transparent;
+    color: #cbd5e1; /* Light text */
+    border: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+#sidebar-wrapper .list-group-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-left: 1.75rem; /* Subtle slide effect */
+}
+
+#sidebar-wrapper .list-group-item.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-right: 4px solid #818cf8;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+/* Toggled State for Desktop */
+body.sb-sidenav-toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    body.sb-sidenav-toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+/* --- CARD STYLING (Mesmerizing Touch) --- */
+.stat-card {
+    background: white;
+    border: none;
+    border-radius: 16px; /* More rounded */
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px); /* Floating effect */
+    box-shadow: var(--hover-shadow);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+}
+
+/* --- TABLE STYLING --- */
+.table-custom thead th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.table-custom tbody tr {
+    transition: background-color 0.2s;
+}
+
+.table-custom tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* --- CHART CONTAINER --- */
+.chart-container {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+}
+
+/* --- NAVBAR & TOPBAR --- */
+.navbar {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+}
+.navbar .btn-light {
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+}
+.navbar .nav-link {
+    color: #374151;
+}
+.navbar .nav-link:hover { color: #111827; }
+
+/* Force consistent navbar appearance even if page uses different utility classes */
+.navbar.bg-primary, .navbar.navbar-dark.bg-primary {
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(15, 23, 42, 0.05) !important;
+}
+.navbar.bg-primary .nav-link, .navbar.navbar-dark.bg-primary .nav-link,
+.navbar.bg-primary .navbar-brand, .navbar.navbar-dark.bg-primary .navbar-brand {
+    color: #374151 !important;
+}
+
+/* Make forms and buttons in the navbar readable when forced to light background */
+.navbar.bg-primary .btn, .navbar.bg-primary .form-control {
+    color: #374151 !important;
+}
+
+/* Theme toggle small adjustments */
+.theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    font-size: 14px;
+}
+
+/* Ensure the sidebar + content wrapper works across pages */
+#wrapper, #page-content-wrapper {
+    width: 100%;
+}
+
+/* Make the page content have comfortable paddings on narrow screens */
+@media (max-width: 767px) {
+    .container-fluid { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Table styles for cars/custom tables */
+.custom-table thead th,
+.table-custom thead th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+.custom-table tbody tr:hover,
+.table-custom tbody tr:hover { background-color: #f1f5f9; }
+
+/* Also apply header styles to generic Bootstrap tables inside the main container
+   so pages that don't use .custom-table still look consistent */
+.container table.table thead th,
+.container-fluid table.table thead th {
+    background-color: #f8fafc;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+.container table.table tbody tr:hover,
+.container-fluid table.table tbody tr:hover { background-color: #f1f5f9; }
+
+/* Card radius consistency */
+.rounded-4 { border-radius: 16px !important; }
+
+/* small helpers to keep contrast in dark-fixes interplay */
+footer { padding: 1rem 0; }
+
+/* Keep focus outlines visible for accessibility */
+:focus { outline: 3px solid rgba(79,70,229,0.15); outline-offset: 2px; }
