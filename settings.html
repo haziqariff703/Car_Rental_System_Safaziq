@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - GoMotion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="d-flex" id="wrapper">
+        
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 fs-4 fw-bold text-uppercase border-bottom border-secondary">
+                <i class="fas fa-car-side me-2"></i> GoMotion<span class="text-primary">Admin</span>
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="dashboard.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tachometer-alt me-2"></i> Dashboard
+                </a>
+                <a href="cars.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-car me-2"></i> Cars List
+                </a>
+                <a href="rentals.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-invoice-dollar me-2"></i> Rentals
+                </a>
+                <a href="customers.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users me-2"></i> Customers
+                </a>
+                <a href="maintenance.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tools me-2"></i> Maintenance
+                </a>
+                </a>
+                </a>
+            </div>
+        </div>
+
+        <div id="page-content-wrapper">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-light" id="menu-toggle"><i class="fas fa-bars"></i></button>
+                    <h4 class="ms-3 mb-0 fw-bold text-secondary">System Settings</h4>
+                </div>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                         <li class="nav-item me-3">
+                        
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                <img src="https://ui-avatars.com/api/?name=Admin+User&background=4f46e5&color=fff" class="rounded-circle me-2" width="35">
+                                Admin User
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end border-0 shadow" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="profile.html">Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="index.html">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4 py-5">
+                
+                <div class="card border-0 shadow-sm rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-primary"><i class="fas fa-paint-brush me-2"></i> Appearance</h5>
+                        <div class="d-flex align-items-center justify-content-between py-3 border-bottom">
+                            <div>
+                                <p class="mb-0 fw-bold text-dark">Dark Mode</p>
+                                <small class="text-muted">Switch between light and dark themes for better visibility at night.</small>
+                            </div>
+                            <button class="btn btn-outline-primary theme-toggle px-4">Switch Theme</button>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between py-3">
+                            <div>
+                                <p class="mb-0 fw-bold text-dark">Compact Sidebar</p>
+                                <small class="text-muted">Reduce sidebar width for more workspace.</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="compactSidebar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-primary"><i class="fas fa-bell me-2"></i> Notifications</h5>
+                        
+                        <div class="d-flex align-items-center justify-content-between py-3 border-bottom">
+                            <div>
+                                <p class="mb-0 fw-bold text-dark">Email Notifications</p>
+                                <small class="text-muted">Receive emails when a new booking is made.</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="emailNotif" checked>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-between py-3">
+                            <div>
+                                <p class="mb-0 fw-bold text-dark">Overdue Alerts</p>
+                                <small class="text-muted">Get a system alert when a car is not returned on time.</small>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="returnNotif" checked>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white border-top py-4 mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright &copy; GoMotion Admin 2025</div>
+                <div>
+                    <a href="#" class="text-decoration-none text-muted mx-2">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted mx-2">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
