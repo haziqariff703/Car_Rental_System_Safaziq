@@ -1,7 +1,7 @@
 # Car Rental System (CRS) - IMS566 Project
 
 ## Description
-This project is a web-based prototype for a Car Rental Management System. It allows administrators to view the dashboard status, manage the car fleet, and view rental records. It simulates a real-world application using static HTML, Bootstrap CSS, and JavaScript.
+This project is a web-based prototype for a Car Rental Management System. It allows administrators to view the dashboard status, manage the car fleet, and view rental records. It simulates a real-world application using static HTML, Bootstrap CSS, W3 Schools, and JavaScript.
 
 ## Features
 - **Authentication:** Secure-looking login page with validation.
@@ -12,7 +12,7 @@ This project is a web-based prototype for a Car Rental Management System. It all
 
 ## Tech Stack
 - **HTML5**
-- **Bootstrap CSS** (via CDN for styling)
+- **Bootstrap CSS & W3 Schools** (via CDN for styling)
 - **ApexCharts** (Data Visualization)
 - **JavaScript** (Logic & DOM Manipulation)
 
@@ -29,4 +29,5 @@ This project is a web-based prototype for a Car Rental Management System. It all
 1. Upload all files to a GitHub Repository.
 2. Go to **Settings** > **Pages**.
 3. Select `main` branch as Source and click **Save**.
+
 4. The site will be live at `https://yourusername.github.io/repo-name`
