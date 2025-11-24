@@ -116,3 +116,34 @@ if (chartElement) {
     var chart = new ApexCharts(document.querySelector("#rentalChart"), options);
     chart.render();
 }
+
+// --- 5. Simple Search Filter ---
+function filterTable() {
+    const input = document.getElementById("searchInput");
+    const filter = input.value.toUpperCase();
+    const table = document.querySelector("table");
+    const tr = table.getElementsByTagName("tr");
+
+    for (let i = 1; i < tr.length; i++) {
+        
+        const td = tr[i].getElementsByTagName("td")[0]; 
+        if (td) {
+            const txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+            }
+        }
+    }
+}
+
+// --- 6. Sidebar Toggle Logic ---
+const toggleButton = document.getElementById("menu-toggle");
+const wrapper = document.getElementById("wrapper");
+
+if (toggleButton && wrapper) {
+    toggleButton.onclick = function () {
+        wrapper.classList.toggle("sb-sidenav-toggled");
+    };
+}
