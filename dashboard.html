@@ -13,79 +13,69 @@
 
     <div class="d-flex" id="wrapper">
     
-    <div id="sidebar-wrapper">
-        
-        <div class="sidebar-profile">
-            <img src="https://ui-avatars.com/api/?name=Haziq+Ariff&background=random&size=128" alt="User Image">
-            <div class="profile-info">
-                <small>WELCOME</small>
-                <h5>ADMIN</h5>
-            </div>
-        </div>
-
-        <div class="sidebar-label">NAVIGATION</div>
-
-        <div class="list-group list-group-flush">
-            <a href="dashboard.html" class="list-group-item list-group-item-action active">
-                <i class="fas fa-tachometer-alt"></i>
-                <span class="menu-text">Dashboard</span>
-            </a>
-            <a href="cars.html" class="list-group-item list-group-item-action">
-                <i class="fas fa-car"></i>
-                <span class="menu-text">Cars List</span>
-            </a>
-            <a href="rentals.html" class="list-group-item list-group-item-action">
-                <i class="fas fa-file-invoice"></i>
-                <span class="menu-text">Rental Logs</span>
-            </a>
-            <a href="customers.html" class="list-group-item list-group-item-action">
-                <i class="fas fa-users"></i>
-                <span class="menu-text">Customers</span>
-            </a>
-            <a href="maintenance.html" class="list-group-item list-group-item-action">
-                <i class="fas fa-tools"></i>
-                <span class="menu-text">Maintenance</span>
-            </a>
-            <a href="index.html" class="list-group-item list-group-item-action text-danger mt-3" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                <span class="menu-text">Logout</span>
-            </a>
-        </div>
-    </div>
-    <div id="page-content-wrapper">
-        
-        <nav class="navbar navbar-expand-lg navbar-teal px-4 py-3">
-            <div class="d-flex align-items-center">
-                <button id="menu-toggle" class="btn btn-link text-white me-3">
-                    <i class="fas fa-bars fa-lg"></i>
-                </button>
-                
-                <div class="input-group d-none d-md-flex" style="width: 250px;">
-                    <input type="text" class="form-control form-control-sm border-0 bg-light bg-opacity-25 text-white placeholder-white" placeholder="Search...">
+        <div id="sidebar-wrapper">
+            <div class="sidebar-profile">
+                <img src="https://ui-avatars.com/api/?name=Haziq+Ariff&background=random&size=128" alt="User Image">
+                <div class="profile-info">
+                    <small>WELCOME</small>
+                    <h5>ADMIN</h5>
                 </div>
             </div>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
-                            <img src="https://ui-avatars.com/api/?name=Admin+User&background=fff&color=1abc9c" class="rounded-circle me-2" width="30">
-                            Haziq Ariff
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end border-0 shadow">
-                            <a class="dropdown-item" href="profile.html">Profile</a>
-                            <a class="dropdown-item" href="settings.html">Settings</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="index.html" class="list-group-item list-group-item-action text-danger mt-3" data-bs-toggle="modal" data-bs-target="#logoutModal">
-                            <span class="menu-text">Logout</span>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="sidebar-label">NAVIGATION</div>
+            <div class="list-group list-group-flush">
+                <a href="dashboard.html" class="list-group-item list-group-item-action active">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span class="menu-text">Dashboard</span>
+                </a>
+                <a href="cars.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-car"></i>
+                    <span class="menu-text">Cars List</span>
+                </a>
+                <a href="rentals.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-file-invoice"></i>
+                    <span class="menu-text">Rental Logs</span>
+                </a>
+                <a href="customers.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-users"></i>
+                    <span class="menu-text">Customers</span>
+                </a>
+                <a href="maintenance.html" class="list-group-item list-group-item-action">
+                    <i class="fas fa-tools"></i>
+                    <span class="menu-text">Maintenance</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action text-danger mt-3" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="menu-text">Logout</span>
+                </a>
             </div>
-        </nav>
+        </div>
+        <div id="page-content-wrapper" class="d-flex flex-column min-vh-100">
+            
+            <nav class="navbar navbar-expand-lg navbar-teal px-4 py-3">
+                <div class="d-flex align-items-center">
+                    <button id="menu-toggle" class="btn btn-link text-white me-3">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                <img src="https://ui-avatars.com/api/?name=Admin+User&background=fff&color=1abc9c" class="rounded-circle me-2" width="30">
+                                Haziq Ariff
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end border-0 shadow">
+                                <a class="dropdown-item" href="profile.html">Profile</a>
+                                <a class="dropdown-item" href="settings.html">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-            <div class="container-fluid px-4 py-5">
+            <div class="container-fluid px-4 py-4">
                 
                 <div id="promoCarousel" class="carousel slide mb-5 shadow rounded-4 overflow-hidden" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -103,6 +93,7 @@
                         <div class="stat-card p-4 d-flex align-items-center justify-content-between">
                             <div>
                                 <p class="text-muted mb-1 fw-bold text-uppercase small">Total Fleet</p>
+                                <h2 class="fw-bold mb-0 text-dark" id="totalCarsDisplay">0</h2>
                             </div>
                             <div class="stat-icon bg-light text-primary">
                                 <i class="fas fa-car"></i>
@@ -113,6 +104,7 @@
                         <div class="stat-card p-4 d-flex align-items-center justify-content-between">
                             <div>
                                 <p class="text-muted mb-1 fw-bold text-uppercase small">Active Rentals</p>
+                                <h2 class="fw-bold mb-0 text-dark" id="activeRentalsDisplay">0</h2>
                             </div>
                             <div class="stat-icon bg-light text-warning">
                                 <i class="fas fa-key"></i>
@@ -123,6 +115,7 @@
                         <div class="stat-card p-4 d-flex align-items-center justify-content-between">
                             <div>
                                 <p class="text-muted mb-1 fw-bold text-uppercase small">Total Revenue</p>
+                                <h2 class="fw-bold mb-0 text-dark" id="totalRevenueDisplay">RM 0</h2>
                             </div>
                             <div class="stat-icon bg-light text-success">
                                 <i class="fas fa-wallet"></i>
@@ -138,7 +131,6 @@
                                 <h5 class="fw-bold m-0 text-secondary">Monthly Revenue</h5>
                                 <select class="form-select form-select-sm w-auto border-0 bg-light fw-bold text-muted">
                                     <option>Year 2025</option>
-                                    <option>Year 2024</option>
                                 </select>
                             </div>
                             <div id="revenueChart"></div>
@@ -149,88 +141,68 @@
                         <div class="chart-container h-100">
                             <h5 class="fw-bold mb-4 text-secondary">Fleet Availability</h5>
                             <div id="statusChart" class="d-flex justify-content-center"></div>
-                            
                             <div class="text-center mt-4">
                                 <p class="small text-muted mb-1">Total Fleet Size</p>
-                                <h3 class="fw-bold text-dark">14 Cars</h3>
+                                <h3 class="fw-bold text-dark" id="totalFleetLabel">Loading...</h3>
                             </div>
                         </div>
                     </div>
                 </div>
-                    
-                    <div class="col-lg-6 mt-4">
-                        <div class="chart-container h-200">
-                            <h5 class="fw-bold mb-4">Recent Activity</h5>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 border-bottom">
-                                    <div class="d-flex align-items-center">
-                                        <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width:35px; height:35px;">
-                                            <i class="fas fa-check small"></i>
-                                        </div>
-                                        <div>
-                                            <p class="mb-0 fw-bold text-dark">Booking #1024</p>
-                                            <small class="text-muted">Completed by Ali</small>
-                                        </div>
-                                    </div>
-                                    <span class="small text-muted">2m ago</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center px-0 py-3 border-bottom">
-                                    <div class="d-flex align-items-center">
-                                        <div class="bg-warning text-dark rounded-circle d-flex justify-content-center align-items-center me-3" style="width:35px; height:35px;">
-                                            <i class="fas fa-plus small"></i>
-                                        </div>
-                                        <div>
-                                            <p class="mb-0 fw-bold text-dark">New Car Added</p>
-                                            <small class="text-muted">Honda City 2024</small>
-                                        </div>
-                                    </div>
-                                    <span class="small text-muted">1h ago</span>
-                                </li>
-                            </ul>
-                            <button class="btn btn-outline-primary w-100 mt-4 btn-sm rounded-pill">View All Logs</button>
+
+                <div class="row mt-4">
+                    <div class="col-lg-6 mb-4">
+                        <div class="chart-container h-100">
+                            <h5 class="fw-bold mb-4">Top 5 Most Popular Cars</h5>
+                            <div id="topCarsChart"></div>
                         </div>
                     </div>
+
+                    <div class="col-lg-6 mb-4">
+                        <div class="chart-container h-100">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5 class="fw-bold m-0">Recent Activity</h5>
+                                <button class="btn btn-sm btn-light text-primary fw-bold">View All</button>
+                            </div>
+                            <ul class="list-group list-group-flush" id="recentActivityList">
+                                </ul>
+                        </div>
+                    </div>
+                </div> 
+
+            </div> 
+    <footer class="bg-white border-top py-4 mt-auto">
+        <div class="container-fluid px-4">
+            <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright © GoMotion Admin 2025</div>
+                <div>
+                    <a href="#" class="text-decoration-none text-muted mx-2">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-muted mx-2">Terms & Conditions</a>
                 </div>
-
             </div>
-         </div> 
-        </div> 
-
-            <footer class="bg-white border-top py-4 mt-auto">
-    <div class="container-fluid px-4">
-        <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; GoMotion Admin 2025</div>
-            <div>
-                <a href="#" class="text-decoration-none text-muted mx-2">Privacy Policy</a>
-                <a href="#" class="text-decoration-none text-muted mx-2">Terms &amp; Conditions</a>
+        </div>
+    </footer>
+    </div>
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold text-danger">
+                    <i class="fas fa-sign-out-alt me-2"></i>Ready to Leave?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    Select "Logout" below if you are ready to end your current session.
+                </div>
+                <div class="modal-footer border-top-0 d-flex justify-content-center gap-2 pb-4">
+                    <button type="button" class="btn btn-light px-4 rounded-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger px-4 rounded-pill" onclick="logout()">Logout</button>
+                </div>
             </div>
         </div>
     </div>
-</footer>
-
-        <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow-lg rounded-4">
-            <div class="modal-header border-bottom-0">
-                <h5 class="modal-title fw-bold text-danger" id="logoutModalLabel">
-                   <i class="fa-solid fa-arrow-right-from-bracket"></i>Ready to Leave?
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center py-4">
-                <p class="text-muted mb-0">Select "Logout" below if you are ready to end your current session.</p>
-            </div>
-            <div class="modal-footer border-top-0 d-flex justify-content-center gap-2 pb-4">
-                <button type="button" class="btn btn-light px-4 rounded-pill" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger px-4 rounded-pill" onclick="logout()">Logout</button>
-            </div>
-        </div>
-    </div>
-</div>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 
 </body>
 </html>
-
