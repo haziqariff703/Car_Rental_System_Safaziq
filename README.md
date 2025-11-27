@@ -1,33 +1,55 @@
-# Car Rental System (CRS) - IMS566 Project
+# GoMotion - Car Rental Management System (IMS566)
 
-## Description
-This project is a web-based prototype for a Car Rental Management System. It allows administrators to view the dashboard status, manage the car fleet, and view rental records. It simulates a real-world application using static HTML, Bootstrap CSS, W3 Schools, and JavaScript.
+## 📖 Project Description
+**GoMotion** is a modern, web-based administration dashboard designed for car rental businesses. It provides a seamless interface for managing vehicle fleets, tracking rental history, and monitoring financial performance in real-time.
 
-## Features
-- **Authentication:** Secure-looking login page with validation.
-- **Dashboard:** Real-time visualization of data using ApexCharts.
-- **Responsive Design:** Fully responsive Navbar and Layout (Mobile/Desktop).
-- **Data Views:** - Cars List with availability status.
-    - Rental Records with payment status.
+This project demonstrates advanced front-end development skills, utilizing dynamic DOM manipulation to simulate a real-world application environment without a backend database.
 
-## Tech Stack
-- **HTML5**
-- **Bootstrap CSS & W3 Schools** (via CDN for styling)
-- **ApexCharts** (Data Visualization)
-- **JavaScript** (Logic & DOM Manipulation)
+---
 
-## How to Run
-1. **Clone** or **Download** this repository.
-2. Open `index.html` in any modern web browser (Chrome, Edge, Firefox).
-3. Use the credentials below to log in.
+## 🚀 Key Features
 
-## Login Credentials
+### 🔐 Authentication & Security
+- **Secure Login:** Simulated authentication system with credential validation.
+- **Session Management:** Prevents access to internal pages without logging in (via LocalStorage).
+- **Logout Safety:** Includes a confirmation modal to prevent accidental logouts.
+
+### 📊 Interactive Dashboard
+- **Real-Time KPIs:** Automatically calculates Total Fleet, Active Rentals, and Revenue based on data.
+- **Data Visualization:**
+  - **Revenue Area Chart:** Visualizes monthly income trends.
+  - **Fleet Status Donut Chart:** Shows real-time car availability.
+  - **Top 5 Cars:** Bar chart ranking the most popular vehicles.
+- **Recent Activity:** A dynamic log showing user actions and system alerts.
+
+### 🚗 Fleet & Rental Management
+- **Dynamic Tables:** All data (Cars, Rentals, Customers) is rendered via JavaScript, making it easy to scale.
+- **Smart Filtering:** Dropdown filters to quickly view Available, Rented, or Maintenance vehicles.
+- **Status Indicators:** Color-coded badges (e.g., Green for "Paid", Red for "Maintenance") for instant status recognition.
+- **CRUD Actions:** Functional "Delete" buttons to remove records from the view.
+
+### 🎨 UI/UX Design
+- **"GoMotion" Theme:** A custom Teal & Dark Blue color scheme for a professional look.
+- **Responsive Sidebar:** Collapsible navigation that works on Desktop and Mobile.
+- **Dark Mode:** Fully functional theme switcher (Light / Dark / Auto) that persists user preference.
+
+---
+
+## 🛠️ Tech Stack
+- **HTML5:** Semantic structure.
+- **CSS3:** Custom styling + **Bootstrap 5.3** framework.
+- **JavaScript (ES6):** Core logic for data processing, DOM manipulation, and interactivity.
+- **ApexCharts.js:** For interactive data visualization.
+- **FontAwesome 6:** For scalable icons.
+
+---
+
+## 💻 How to Run
+1. **Download** or **Clone** this repository.
+2. Open the project folder.
+3. Double-click `index.html` to open it in your web browser (Chrome recommended).
+4. Login using the credentials below.
+
+### 🔑 Demo Credentials
 - **Username:** `admin`
 - **Password:** `1234`
-
-## Deployment Instructions (GitHub Pages)
-1. Upload all files to a GitHub Repository.
-2. Go to **Settings** > **Pages**.
-3. Select `main` branch as Source and click **Save**.
-
-4. The site will be live at `https://yourusername.github.io/repo-name`
